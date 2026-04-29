@@ -8,20 +8,89 @@
 	h1 {
 		background-color:lightblue;
 	}
+	.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  padding: 3px;
+}
+
+.container div {
+  padding: 10px;
+  margin: 5px;
+}
+.image {
+  position: relative;
+  width: 200px;
+}
+
+/* Make entire area clickable */
+.image a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.image img {
+  width: 100%;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+/* Overlay tint */
+.overlay {
+   position: absolute;
+  inset: 0; /* same as top:0; left:0; right:0; bottom:0 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Text box */
+.title {
+  background-color: #CBC3E3;
+  color: black;
+  padding: 10px 20px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 0; /* square corners */
+}
+
+/* Hover effects */
+.image:hover img {
+  opacity: 0.6;
+}
+
+.image:hover .overlay {
+  opacity: 1;
+}
+
 </style>
 <title>Appetizers</title>
 </head>
 <body>
 <h1>Appetizers</h1>
-<img src="Swedishmeatballs.jpg" alt="Swedish Meatballs"/>
-<img src="zucchinipie.jpeg" alt="Zucchini Pie on Quiche"/>
-<img src="guacamole.jpeg" alt="Guacamole"/>
-<img src="cheesespread.jpeg" alt="Fiesta Cheese Spread"/>
-<img src="portobellomushrooms.jpeg" alt="Grilled Portobello Mushrooms"/>
-<img src="blackbeandip.jpeg" alt="Black Bean Dip"/>
-<img src="applesaucecake.jpeg" alt="Applesauce Cake"/>
-<img src="bakedbeans.jpeg" alt="Baked Beans"/>
-<img src="Barley.jpg" alt="Barley with Mushrooms"/>
+<div class="container">
+	<div class="image">
+  <a href="swedishmeatballs.html">
+    <img src="Swedishmeatballs.jpg" alt="Swedish Meatballs">
+    <div class="overlay">
+      <div class="title">Swedish <br> Meatballs</div>
+    </div>
+  </a>
+</div>
+<div><img src="zucchinipie.jpeg" alt="Zucchini Pie on Quiche"/></div>
+<div><img src="guacamole.jpeg" alt="Guacamole"/></div>
+<div><img src="cheesespread.jpeg" alt="Fiesta Cheese Spread"/></div>
+<div><img src="portobellomushrooms.jpeg" alt="Grilled Portobello Mushrooms"/></div>
+<div><img src="blackbeandip.jpeg" alt="Black Bean Dip"/></div>
+<div><img src="applesaucecake.jpeg" alt="Applesauce Cake"/></div>
+<div><img src="bakedbeans.jpeg" alt="Baked Beans"/></div>
+<div><img src="Barley.jpg" alt="Barley with Mushrooms"/></div>
+</div>
 
 <ul>
 	<li><a href="swedishmeatballs.html">Nana's Sweet and Sour Meatballs</a></li>

@@ -8,6 +8,16 @@
 	.header {
 		background-color:lightblue;
 	}
+	.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container div {
+  margin: 10px;
+  padding: 10px;
+}
+
 	</style>
 	<title>Salads</title>
 </head>
@@ -15,11 +25,13 @@
 	<div class=header>
 	<h1>Salads</h1>
 </div>
-	<img src="Israelisalad.jpg" alt="Israeli Salad"/>
-	<img src="strawberryromainesalad.jpeg" alt="Strawberry/Romaine Salad"/>
-	<img src="spinachstrawberrysalad.jpeg" alt="Spinach Strawberry Salad"/>
-	<img src="slaw.jpeg" alt="Slaw"/>
-	<img src="dressing.jpeg" alt="Caesar Salad Dressing"/>
+<div class="container">
+	<div><img src="Israelisalad.jpg" alt="Israeli Salad"/></div>
+	<div><img src="strawberryromainesalad.jpeg" alt="Strawberry/Romaine Salad"/></div>
+	<div><img src="spinachstrawberrysalad.jpeg" alt="Spinach Strawberry Salad"/></div>
+	<div><img src="slaw.jpeg" alt="Slaw"/></div>
+	<div><img src="dressing.jpeg" alt="Caesar Salad Dressing"/></div>
+</div>
 <ul>
 	<li><a href="israelisalad.html">Israeli Salad</a></li>
 	<li><a href="romainesalad.html">Sharon's Strawberry/Romaine Salad</a></li>
